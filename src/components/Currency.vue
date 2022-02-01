@@ -64,6 +64,10 @@ export default class Currency extends Vue {
 			this.priceColor = this.redColor
 			this.priceArrow = this.downArrow
 		}
+		setTimeout(() => {
+			this.priceColor = '#000'
+			this.priceArrow = ''
+		}, 5000)
 	}
 
 	@Watch('data.h24')
@@ -76,6 +80,10 @@ export default class Currency extends Vue {
 			this.h24Color = this.redColor
 			this.h24Arrow = this.downArrow
 		}
+		setTimeout(() => {
+			this.h24Color = '#000'
+			this.h24Arrow = ''
+		}, 5000)
 	}
 
 	@Watch('data.d7')
@@ -88,6 +96,10 @@ export default class Currency extends Vue {
 			this.d7Color = this.redColor
 			this.d7Arrow = this.downArrow
 		}
+		setTimeout(() => {
+			this.d7Color = '#000'
+			this.d7Arrow = ''
+		}, 5000)
 	}
 
 	@Watch('data.marketCap')
@@ -100,6 +112,10 @@ export default class Currency extends Vue {
 			this.marketCapColor = this.redColor
 			this.marketCapArrow = this.downArrow
 		}
+		setTimeout(() => {
+			this.marketCapColor = '#000'
+			this.marketCapArrow = ''
+		}, 5000)
 	}
 
 	@Watch('data.tradingVolume')
@@ -112,6 +128,10 @@ export default class Currency extends Vue {
 			this.tradingVolumeColor = this.redColor
 			this.tradingVolumeArrow = this.downArrow
 		}
+		setTimeout(() => {
+			this.tradingVolumeColor = '#000'
+			this.tradingVolumeArrow = ''
+		}, 5000)
 	}
 
 }

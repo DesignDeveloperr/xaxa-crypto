@@ -43,6 +43,6 @@ main {
   width: 1200px;
   background-color: white;
   border-radius: 10px;
-  margin: 20px auto 0 auto;
+  margin: 20px auto 50px auto;
 }
 </style>

@@ -29,12 +29,8 @@ export default class Header extends Vue {
     },
     {
       name: 'Каталог',
-      url: '/catalog'
-    },
-    {
-      name: 'Контакты',
-      url: '/contacts'
-    },
+      url: '/collection'
+    }
   ]
 
 }
@@ -58,7 +54,7 @@ nav ul {
   list-style-type: none;
   margin-top: 40px;
   justify-content: space-between;
-  width: 400px;
+  width: 200px;
 }
 
 nav ul li a {

@@ -42,10 +42,7 @@ export default class Currency extends Vue {
 	priceColor: string = '#000'
 	priceArrow: string = ''
 
-	h24Color: string = '#000'
 	h24Arrow: string = ''
-
-	d7Color: string = '#000'
 	d7Arrow: string = ''
 
 	marketCapColor: string = '#000'
@@ -53,6 +50,16 @@ export default class Currency extends Vue {
 
 	tradingVolumeColor: string = '#000'
 	tradingVolumeArrow: string = ''
+
+	get h24Color() {
+		if (!this.data?.h24) return '#000'
+		return Number(this.data?.h24) > 0 ? this.greenColor : this.redColor
+	}
+
+	get d7Color() {
+		if (!this.data?.h24) return '#000'
+		return Number(this.data?.d7) > 0 ? this.greenColor : this.redColor
+	}
 
 	@Watch('data.price')
 	updatePriceHandler(newValue: string, oldValue: string) {
@@ -74,14 +81,11 @@ export default class Currency extends Vue {
 	updateH24Handler(newValue: string, oldValue: string) {
 		if (!oldValue) return
 		if (Number(newValue) > Number(oldValue)) {
-			this.h24Color = this.greenColor
 			this.h24Arrow = this.upArrow
 		} else {
-			this.h24Color = this.redColor
 			this.h24Arrow = this.downArrow
 		}
 		setTimeout(() => {
-			this.h24Color = '#000'
 			this.h24Arrow = ''
 		}, 5000)
 	}
@@ -90,14 +94,11 @@ export default class Currency extends Vue {
 	updateD7Handler(newValue: string, oldValue: string) {
 		if (!oldValue) return
 		if (Number(newValue) > Number(oldValue)) {
-			this.d7Color = this.greenColor
 			this.d7Arrow = this.upArrow
 		} else {
-			this.d7Color = this.redColor
 			this.d7Arrow = this.downArrow
 		}
 		setTimeout(() => {
-			this.d7Color = '#000'
 			this.d7Arrow = ''
 		}, 5000)
 	}
